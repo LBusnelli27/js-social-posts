@@ -215,10 +215,10 @@ for (let i = 1; i < (likeBtns.length + 1); i++) {
         likeArrayIds.push(posts[i].id)
         console.log(likeArrayIds);
 
-        let likesCounter = posts[i - 2].likes + 1;
+        let likesCounter = posts[i - 1].likes + 1;
         console.log(likesCounter);
 
-        let likeCounterDom = document.getElementById(`like-counter-${i - 2}`);
+        let likeCounterDom = document.getElementById(`like-counter-${i + 1}`);
 
         setInterval(() => {
             likeCounterDom.innerHTML = likesCounter;
