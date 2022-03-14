@@ -171,7 +171,7 @@ const containerAllPosts = document.getElementById('container');
 
 for (let i = 0; i < posts.length; i++) {
     containerAllPosts.innerHTML += `
-    <div class="post">
+    <div id="${i + 2}-post" class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -190,7 +190,7 @@ for (let i = 0; i < posts.length; i++) {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="${i + 2}">
+                        <a class="like-button  js-like-button" href="#${i + 2}-post" data-postid="${i + 2}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
