@@ -7,7 +7,7 @@ const posts = [
             "name": "Phil Mangione",
             "image": "https://unsplash.it/300/300?image=15"
         },
-        "likes": 80,
+        "likes": 102,
         "created": "2021-06-25"
     },
     {
@@ -51,7 +51,7 @@ const posts = [
             "name": "Alessandro Sainato",
             "image": "https://unsplash.it/300/300?image=29"
         },
-        "likes": 95,
+        "likes": 22,
         "created": "2021-03-05"
     },
     {
@@ -95,7 +95,7 @@ const posts = [
             "name": "Luca Formicola",
             "image": "https://unsplash.it/600/600?image=24"
         },
-        "likes": 56,
+        "likes": 32,
         "created": "2021-04-03"
     },
     {
@@ -139,7 +139,7 @@ const posts = [
             "name": "Chiara Passaro",
             "image": "https://unsplash.it/300/300?image=20"
         },
-        "likes": 78,
+        "likes": 123,
         "created": "2021-05-15"
     },
     {
@@ -190,7 +190,7 @@ for (let i = 0; i < posts.length; i++) {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                        <a class="like-button  js-like-button" href="#" data-postid="${i + 2}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
@@ -202,4 +202,13 @@ for (let i = 0; i < posts.length; i++) {
             </div>            
         </div>
     `
+}
+
+let likeBtns = document.querySelectorAll('.like-button');
+console.log(likeBtn);
+
+for (let i = 0; i < likeBtn.length; i++) {
+    likeBtn[i].addEventListener('click', function() {
+        likeBtn[i].classList.add('like-button--liked');
+    })
 }
