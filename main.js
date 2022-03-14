@@ -196,7 +196,7 @@ for (let i = 0; i < posts.length; i++) {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${posts[i].likes}</b> persone
+                        Piace a <b id="like-counter-${i + 2}" class="js-likes-counter">${posts[i].likes}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -209,10 +209,19 @@ console.log(likeBtns);
 
 const likeArrayIds = [];
 
-for (let i = 0; i < likeBtns.length; i++) {
-    likeBtns[i].addEventListener('click', function() {
-        likeBtns[i].classList.add('like-button--liked');
+for (let i = 1; i < (likeBtns.length + 1); i++) {
+    likeBtns[i - 1].addEventListener('click', function() {
+        likeBtns[i - 1].classList.add('like-button--liked');
         likeArrayIds.push(posts[i].id)
         console.log(likeArrayIds);
+
+        let likesCounter = posts[i - 2].likes + 1;
+        console.log(likesCounter);
+
+        let likeCounterDom = document.getElementById(`like-counter-${i - 2}`);
+
+        setInterval(() => {
+            likeCounterDom.innerHTML = likesCounter;
+        }, 1000);
     })
 }
