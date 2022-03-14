@@ -205,10 +205,10 @@ for (let i = 0; i < posts.length; i++) {
 }
 
 let likeBtns = document.querySelectorAll('.like-button');
-console.log(likeBtn);
+console.log(likeBtns);
 
 for (let i = 0; i < likeBtns.length; i++) {
     likeBtns[i].addEventListener('click', function() {
-        likeBtns[i].classList.add('like-button--liked');
+        likeBtns[i].classList.toggle('like-button--liked');
     })
 }
