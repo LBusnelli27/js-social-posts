@@ -207,8 +207,12 @@ for (let i = 0; i < posts.length; i++) {
 let likeBtns = document.querySelectorAll('.like-button');
 console.log(likeBtns);
 
+const likeArrayIds = [];
+
 for (let i = 0; i < likeBtns.length; i++) {
     likeBtns[i].addEventListener('click', function() {
-        likeBtns[i].classList.toggle('like-button--liked');
+        likeBtns[i].classList.add('like-button--liked');
+        likeArrayIds.push(posts[i].id)
+        console.log(likeArrayIds);
     })
 }
