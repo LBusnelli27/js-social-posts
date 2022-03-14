@@ -222,6 +222,6 @@ for (let i = 1; i < (likeBtns.length + 1); i++) {
 
         setInterval(() => {
             likeCounterDom.innerHTML = likesCounter;
-        }, 1000);
+        }, 500);
     })
 }
