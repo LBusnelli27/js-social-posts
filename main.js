@@ -171,7 +171,7 @@ const containerAllPosts = document.getElementById('container');
 
 for (let i = 0; i < posts.length; i++) {
     containerAllPosts.innerHTML += `
-    <div id="${i + 1}-post" class="post">
+    <div id="${posts[i].id}-post" class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -185,7 +185,7 @@ for (let i = 0; i < posts.length; i++) {
             </div>
             <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
             <div class="post__image">
-                <img src="${posts[i].author.image}" alt="">
+                <img src="${posts[i].author.image}" alt="Immagine del ${posts[i].id} post">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
