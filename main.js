@@ -178,8 +178,8 @@ for (let i = 0; i < posts.length; i++) {
                         <img class="profile-pic" src="${posts[i].media}" alt="Phil Mangione">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">Phil Mangione</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__author">${posts[i].author.name}</div>
+                        <div class="post-meta__time">${posts[i].created}</div>
                     </div>                    
                 </div>
             </div>
