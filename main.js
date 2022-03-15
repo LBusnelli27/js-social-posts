@@ -171,7 +171,7 @@ const containerAllPosts = document.getElementById('container');
 
 for (let i = 0; i < posts.length; i++) {
     containerAllPosts.innerHTML += `
-    <div id="${i + 2}-post" class="post">
+    <div id="${i + 1}-post" class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -190,13 +190,13 @@ for (let i = 0; i < posts.length; i++) {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#${i + 2}-post" data-postid="${i + 2}">
+                        <a class="like-button  js-like-button" href="#${i + 1}-post" data-postid="${i + 1}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-${i + 2}" class="js-likes-counter">${posts[i].likes}</b> persone
+                        Piace a <b id="like-counter-${i + 1}" class="js-likes-counter">${posts[i].likes}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -218,7 +218,7 @@ for (let i = 1; i < (likeBtns.length + 1); i++) {
         let likesCounter = posts[i - 1].likes + 1;
         console.log(likesCounter);
 
-        let likeCounterDom = document.getElementById(`like-counter-${i + 1}`);
+        let likeCounterDom = document.getElementById(`like-counter-${i}`);
 
         setInterval(() => {
             likeCounterDom.innerHTML = likesCounter;
